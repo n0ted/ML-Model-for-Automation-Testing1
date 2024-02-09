@@ -6,7 +6,7 @@ from sklearn.svm import SVC
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import classification_report
 
-data = pd.read_csv('annotated_dataset.csv')
+data = pd.read_csv('html_elements_locators.csv')
 
 data['HasChildren'] = data['HasChildren'].map({True: 1, False: 0})
 

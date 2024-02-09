@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 # Sample HTML data
-with open('ML Training/DOM Files/htmltest.html', 'r',encoding = 'utf-8') as file:
+with open('ML_Training/DOM Files/Test1/site1.html', 'r',encoding = 'utf-8') as file:
     html_content = file.read()
 # Parse the HTML
 soup = BeautifulSoup(html_content, 'html.parser')

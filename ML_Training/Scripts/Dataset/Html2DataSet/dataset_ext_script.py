@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import pandas as pd
 
-# Assuming html_content contains your HTML
+
 with open('c:/Users/Lenovo/Downloads/Test/htmltest.html', 'a', encoding='utf-8') as file:
     html_content = file.read()
 
