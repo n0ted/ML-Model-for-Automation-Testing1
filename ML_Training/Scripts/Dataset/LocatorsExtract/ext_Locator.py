@@ -51,6 +51,7 @@ for element in soup.find_all('a'):
 df = pd.DataFrame(data)
 
 # Save to CSV
-df.to_csv('html_elements_locators.csv', index=False)
+path = 'C:/Users/Lenovo/Downloads/Test/ML_Training/DataSet/html_elements_locators.csv'
+df.to_csv(path, index=False)
 
 print(df)
