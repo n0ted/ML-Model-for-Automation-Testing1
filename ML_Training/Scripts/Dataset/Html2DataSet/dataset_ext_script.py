@@ -14,7 +14,6 @@ def extract_features(element, element_name):
     return {
         'Element': element_name,
         'TagName': element.name,
-        
         'Class': ' '.join(element.get('class', '')),
         'TextLength': len(element.text.strip()),
         'HasChildren': len(element.find_all(recursive=False)) > 0,
