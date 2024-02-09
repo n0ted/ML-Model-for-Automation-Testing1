@@ -8,6 +8,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.preprocessing import FunctionTransformer
 import numpy as np
+import re
 
 
 data = pd.read_csv('c:/Users/Lenovo/Downloads/Test/ML_Training/DataSet/sample.csv')
@@ -53,13 +54,13 @@ accuracy = accuracy_score(y_test, y_pred)
 try:
     with open('acc_report.txt', 'r') as f:
         content = f.read()
-        last_trial_pos = content.rfind('Trial')
-        if last_trial_pos != -1:
-            last_trial_num = int(content[last_trial_pos+6:content.find(':', last_trial_pos)])
-
+        # Use a regular expression to find all occurrences of "Trial <number>:" and extract <number>
+        trial_numbers = re.findall(r'Trial (\d+):', content)
+        if trial_numbers:
+            # Convert found numbers to integers and take the max to find the last trial number
+            last_trial_num = max(map(int, trial_numbers))
         else:
             last_trial_num = 0
-        
 except FileNotFoundError:
     last_trial_num = 0
 
@@ -68,11 +69,10 @@ trial_num = last_trial_num + 1
 file_path = 'C:/Users/Lenovo/Downloads/Test/ML_Training/DataSet/acc_report.txt'
 with open(file_path, 'a') as f:
     print(f"Trial {trial_num}:", file=f)
-    print("accuracy report based on adjusted weights/n", file=f)
+    print("Accuracy report based on adjusted weights\n", file=f)
     print("Accuracy:", accuracy, file=f)
-    print("Classification Report:/n", classification_report(y_test, y_pred), file=f)
-    print("/n---/n", file=f)  
-
+    print("Classification Report:\n", classification_report(y_test, y_pred), file=f)
+    print("\n---\n", file=f)
 
 # from bs4 import BeautifulSoup
 # import pandas as pd
