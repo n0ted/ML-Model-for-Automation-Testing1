@@ -32,3 +32,38 @@ weighted avg       0.44      0.67      0.53         3
 
 ---
 
+Trial 1:
+Accuracy report based on adjusted weights
+
+Accuracy: 0.6666666666666666
+Classification Report:
+               precision    recall  f1-score   support
+
+        High       0.00      0.00      0.00         1
+      Medium       0.67      1.00      0.80         2
+
+    accuracy                           0.67         3
+   macro avg       0.33      0.50      0.40         3
+weighted avg       0.44      0.67      0.53         3
+
+
+---
+
+Trial 1:
+Accuracy report based on adjusted weights
+
+Accuracy: 0.14285714285714285
+Classification Report:
+               precision    recall  f1-score   support
+
+        High       0.50      0.33      0.40         3
+         Low       0.00      0.00      0.00         0
+      Medium       0.00      0.00      0.00         4
+
+    accuracy                           0.14         7
+   macro avg       0.17      0.11      0.13         7
+weighted avg       0.21      0.14      0.17         7
+
+
+---
+
