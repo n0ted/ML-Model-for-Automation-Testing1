@@ -10,7 +10,7 @@ import re
 
 data = pd.read_csv('c:/Users/Lenovo/Downloads/Test/ML_Training/DataSet/sample.csv')
 
-# Function to process dates
+
 def process_dates(df):
     reference_date = pd.Timestamp('2023-01-01')
     for col in ['Created Date', 'Last Updated Date']:
@@ -18,20 +18,17 @@ def process_dates(df):
         df[col] = (df[col] - reference_date).dt.days
     return df
 
-# Preprocess data
+
 data = process_dates(data)
 
-# Split features and target
 X = data.drop('Priority', axis=1)
 y = data['Priority']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Define categorical, text, and date features
 categorical_features = ['Status', 'Assigned To', 'Created By']
 text_features = 'Description'
 date_features = ['Created Date', 'Last Updated Date']
 
-# Preprocessing pipeline
 preprocessor = ColumnTransformer(
     transformers=[
         ('cat', OneHotEncoder(), categorical_features),
@@ -41,22 +38,17 @@ preprocessor = ColumnTransformer(
     remainder='drop'
 )
 
-# Logistic Regression model pipeline
 model_pipeline = Pipeline(steps=[
     ('preprocessor', preprocessor),
     ('logistic_regression', LogisticRegression(max_iter=1000))
 ])
 
-# Train model
 model_pipeline.fit(X_train, y_train)
 
-# Make predictions
 y_pred = model_pipeline.predict(X_test)
 
-# Evaluation
 accuracy = accuracy_score(y_test, y_pred)
 
-# Function to process dates
 def process_dates(df):
     reference_date = pd.Timestamp('2023-01-01')
     for col in ['Created Date', 'Last Updated Date']:
@@ -64,7 +56,6 @@ def process_dates(df):
         df[col] = (df[col] - reference_date).dt.days
     return df
 
-# Preprocessing pipeline
 def get_preprocessor():
     categorical_features = ['Status', 'Assigned To', 'Created By']
     text_features = 'Description'
@@ -115,7 +106,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # Load model
 model_pipeline = load_model()
 
-# Example usage
 while True:
     # User input for new test case
     new_test_case = pd.DataFrame(columns=X_train.columns)
@@ -128,8 +118,6 @@ while True:
     
     # Output prediction
     print(f"Predicted Priority: {predicted_priority[0]}")
-    
-    # Ask user if they want to input another test case
     another_test_case = input("Do you want to input another test case? (yes/no): ")
     if another_test_case.lower() != 'yes':
         break
