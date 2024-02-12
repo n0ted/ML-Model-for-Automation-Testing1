@@ -15,7 +15,6 @@ from sklearn.tree import DecisionTreeClassifier
 import re
 
 # Simulated code for data loading and preprocessing
-# Assume 'data' is preprocessed DataFrame from the provided code snippet
 
 data = pd.read_csv('c:/Users/Lenovo/Downloads/Test/ML_Training/DataSet/sample.csv')
 
@@ -32,8 +31,8 @@ X = data.drop('Priority', axis=1)
 y = data['Priority']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-categorical_features = ['Status', 'Assigned To', 'Created By']  # Update based on your analysis
-text_features = 'Description'  # Assuming we're only vectorizing the 'Description' for simplicity
+categorical_features = ['Status', 'Assigned To', 'Created By'] 
+text_features = 'Description'  
 date_features = ['Created Date', 'Last Updated Date']
 preprocessor = ColumnTransformer(
     transformers=[
@@ -43,7 +42,7 @@ preprocessor = ColumnTransformer(
     ],
     remainder='drop'
 )
-# Define ML models to evaluate
+#  ML models 
 models = {
     'RandomForestClassifier': RandomForestClassifier(random_state=20, class_weight='balanced'),
     'LogisticRegression': LogisticRegression(random_state=20, class_weight='balanced', max_iter=1000),
@@ -54,14 +53,13 @@ models = {
 
 
 
-# Dictionary to store accuracy of each model
+#storing accuracy values of all the algorithms
 accuracy_scores = {}
 
-# Assuming 'X_train', 'y_train', 'X_test', 'y_test' are defined based on the provided snippet
+
 for name, model in models.items():
-    # Update the model in the pipeline
     model_pipeline = Pipeline(steps=[
-        ('preprocessor', preprocessor),  # 'preprocessor' defined in the provided code snippet
+        ('preprocessor', preprocessor), 
         ('classifier', model)
     ])
     
@@ -73,7 +71,7 @@ for name, model in models.items():
     accuracy = accuracy_score(y_test, y_pred)
     accuracy_scores[name] = accuracy
 
-# Plotting the accuracies
+# Plotting on graph
 names = list(accuracy_scores.keys())
 values = list(accuracy_scores.values())
 
@@ -85,7 +83,7 @@ plt.title('ML Model Accuracy')
 plt.xticks(rotation=45)
 plt.tight_layout()
 
-# Display the plot
+# Graphical Representation 
 plt.show()
 
 # Note: This plotting code assumes matplotlib is available and the data processing steps are done correctly.
