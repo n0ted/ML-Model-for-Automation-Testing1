@@ -157,3 +157,39 @@ weighted avg       0.36      0.30      0.29        23
 
 ---
 
+Trial 1:
+Accuracy report based on Random Forest Algorithm
+
+Accuracy: 0.21739130434782608
+Classification Report:
+               precision    recall  f1-score   support
+
+        High       0.14      0.14      0.14         7
+         Low       1.00      0.12      0.22         8
+      Medium       0.20      0.38      0.26         8
+
+    accuracy                           0.22        23
+   macro avg       0.45      0.21      0.21        23
+weighted avg       0.46      0.22      0.21        23
+
+
+---
+
+Trial 1:
+Accuracy report based on Logistic Regression
+
+Accuracy: 0.30434782608695654
+Classification Report:
+               precision    recall  f1-score   support
+
+        High       0.20      0.29      0.24         7
+         Low       0.50      0.12      0.20         8
+      Medium       0.36      0.50      0.42         8
+
+    accuracy                           0.30        23
+   macro avg       0.35      0.30      0.29        23
+weighted avg       0.36      0.30      0.29        23
+
+
+---
+
