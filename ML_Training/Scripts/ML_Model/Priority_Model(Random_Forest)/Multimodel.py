@@ -78,7 +78,7 @@ names = list(accuracy_scores.keys())
 values = list(accuracy_scores.values())
 
 plt.figure(figsize=(10, 5))
-plt.bar(names, values)
+plt.plot(names, values)
 plt.xlabel('Machine Learning Model')
 plt.ylabel('Accuracy')
 plt.title('ML Model Accuracy')

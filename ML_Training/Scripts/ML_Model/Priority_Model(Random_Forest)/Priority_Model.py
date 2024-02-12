@@ -73,3 +73,8 @@ with open(file_path, 'a') as f:
     print("Accuracy:", accuracy, file=f)
     print("Classification Report:\n", classification_report(y_test, y_pred), file=f)
     print("\n---\n", file=f)
+
+print("Accuracy report based on adjusted weights\n")
+print("Accuracy:", accuracy)
+print("Classification Report:\n", classification_report(y_test, y_pred))
+print("\n---\n")
