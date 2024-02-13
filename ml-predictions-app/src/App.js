@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -36,9 +37,13 @@ function App() {
 
   return (
     <div>
-      <h1>ML Predictions App</h1>
-      <input type="file" onChange={handleFileUpload} />
-      <button onClick={handlePrediction}>Predict</button>
+      <h2>
+        Priority Pred 
+        <small class="text-body-secondary">iction Module</small>
+      </h2>
+        <input type="file" className="form-control form-control-sm" id="inputGroupFile02" onChange={handleFileUpload} />
+        <button type="button" onClick ={handlePrediction} class="btn btn-success">Predict Result</button>
+    
       {error && <div style={{ color: 'red' }}>{error}</div>}
       {predictions.length > 0 && (
         <div>
