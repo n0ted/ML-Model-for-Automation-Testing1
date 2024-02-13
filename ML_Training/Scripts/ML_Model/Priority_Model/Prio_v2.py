@@ -67,5 +67,10 @@ new_test_cases = pd.read_csv('ML_Training/DataSet/output.csv')
 predicted_priorities = predict_priority_for_new_test_cases(new_test_cases)
 
 # Output predictions
+
 new_test_cases['Predicted Priority'] = predicted_priorities
 print(new_test_cases)
+
+file_path = 'ML_Training/DataSet/genoutput.csv'
+with open(file_path, 'a') as f:
+    print(new_test_cases, file = f)
