@@ -53,13 +53,14 @@ function App() {
       {error && <div style={{ color: 'red' }}>{error}</div>}
       {predictions.length > 0 && (
         <div>
-          <h2>Predictions:</h2>
-          <ul>
-            {predictions.map((prediction, index) => (
-              <li key={index}>TC{index + 1}: {prediction}</li>
-            ))}
-          </ul>
-        </div>
+  <h2 style={{ color: 'grey' }}>Predictions:</h2>
+  <ul style={{ color: 'white' }}>
+    {predictions.map((prediction, index) => (
+      <li key={index}>TC{index + 1}: {prediction}</li>
+    ))}
+  </ul>
+</div>
+
       )}
     </div>
   );
