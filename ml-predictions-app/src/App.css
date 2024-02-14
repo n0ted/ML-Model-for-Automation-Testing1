@@ -14,18 +14,39 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #0055ff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.app-container {
+  background-image: linear-gradient(180deg, rgba(var(--bs-body-bg-rgb), 0.01), rgba(var(--bs-body-bg-rgb), 1) 85%), radial-gradient(ellipse at top left, rgba(var(--bs-primary-rgb), 0.5), transparent 50%), radial-gradient(ellipse at top right, rgba(var(--bd-accent-rgb), 0.5), transparent 50%), radial-gradient(ellipse at center right, rgba(var(--bd-violet-rgb), 0.5), transparent 50%), radial-gradient(ellipse at center left, rgba(var(--bd-pink-rgb), 0.5), transparent 50%) !important;
+}
+
+.bg-info {
+  --bs-bg-opacity: 1;
+  background-image: linear-gradient(337deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 1) 59%) !important;
+  background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity)) !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+h2, .h2 {
+  font-size: calc(1.325rem + .9vw);
+  color: rgb(233, 184, 50);
+  font-weight: bold;
+  font-family: "Vogue", sans-serif; /* Replace "Vogue" with your preferred classy font */
 }
 
 @keyframes App-logo-spin {

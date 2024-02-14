@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 function App() {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -40,10 +41,10 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="p-3 mb-2 bg-info text-dark">
       <h2>
-        Priority Pred
-        <small className="text-muted">iction Module</small>
+        Priority Prediction Module
+        <small className="text-muted"> (Prediction Module)</small>
       </h2>
       <input type="file" className="form-control form-control-sm" id="inputGroupFile02" onChange={handleFileUpload} />
       <button type="button" onClick={handlePrediction} className="btn btn-success">Predict Result</button>
