@@ -44,7 +44,7 @@ function App() {
     <div className="p-3 mb-2 bg-info text-dark">
       <h2>
         Priority Prediction Module
-        <small className="text-muted"> (Prediction Module)</small>
+        <small className="text-muted"> (Upload sample testcase)</small>
       </h2>
       <input type="file" className="form-control form-control-sm" id="inputGroupFile02" onChange={handleFileUpload} />
       <button type="button" onClick={handlePrediction} className="btn btn-success">Predict Result</button>

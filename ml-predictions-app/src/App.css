@@ -44,10 +44,12 @@
 }
 h2, .h2 {
   font-size: calc(1.325rem + .9vw);
-  color: rgb(233, 184, 50);
+  color: rgb(255, 255, 255);
   font-weight: bold;
   font-family: "Vogue", sans-serif; /* Replace "Vogue" with your preferred classy font */
+  text-shadow: 2 2 20px rgba(1, 128, 247, 0.767); /* Adjust the values as needed */
 }
+
 
 @keyframes App-logo-spin {
   from {
