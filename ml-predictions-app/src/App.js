@@ -41,13 +41,14 @@ function App() {
   };
 
   return (
-    <div className="p-3 mb-2 bg-info text-dark">
-      <h2>
+    
+    <div className="container p-3 mb-2 bg-info text-dark" style={{ minHeight: '100vh' }}>
+      <h2 style={{ marginRight: '50px', marginTop:'10px'}}>
         Priority Prediction Module
-        <small className="text-muted"> (Upload sample testcase)</small>
+        <small className="text-muted"></small>
       </h2>
-      <input type="file" className="form-control form-control-sm" id="inputGroupFile02" onChange={handleFileUpload} />
-      <button type="button" onClick={handlePrediction} className="btn btn-success">Predict Result</button>
+      <input type="file" className="form-control form-control-sm custom-file-input" id="inputGroupFile02" onChange={handleFileUpload} />
+      <button type="button" onClick={handlePrediction} className="btn btn-success size"style={{ width: '80px', borderradius: '39px' }}>Predict Result</button>
 
       {loading && <div className="spinner-border text-primary" role="status"><span className="visually-hidden">Loading...</span></div>}
       {error && <div style={{ color: 'red' }}>{error}</div>}
@@ -60,6 +61,7 @@ function App() {
     ))}
   </ul>
 </div>
+
 
       )}
     </div>

@@ -50,6 +50,16 @@ h2, .h2 {
   text-shadow: 0 0 43px rgba(1, 128, 247, 0.767); /* Adjust the values as needed */
 }
 
+.custom-file-input {
+  width: 355px; /* Adjust the width as needed */
+  margin-right: 50px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 @keyframes App-logo-spin {
   from {
