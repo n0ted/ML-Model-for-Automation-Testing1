@@ -37,7 +37,7 @@ date_features = ['Created Date', 'Last Updated Date']
 preprocessor = ColumnTransformer(
     transformers=[
         ('cat', OneHotEncoder(), categorical_features),
-        ('text', TfidfVectorizer(), text_features),
+        ('text', TfidfVectorizer(ngram_range=(1, 2), max_df=0.21, min_df=2, use_idf=True), text_features),
         ('date', 'passthrough', date_features)
     ],
     remainder='drop'
@@ -76,7 +76,7 @@ names = list(accuracy_scores.keys())
 values = list(accuracy_scores.values())
 
 plt.figure(figsize=(10, 5))
-plt.plot(names, values)
+plt.bar(names, values)
 plt.xlabel('Machine Learning Model')
 plt.ylabel('Accuracy')
 plt.title('ML Model Accuracy')
