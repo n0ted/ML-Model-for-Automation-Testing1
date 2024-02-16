@@ -211,3 +211,21 @@ weighted avg       0.27      0.28      0.27        29
 
 ---
 
+Trial 1:
+Accuracy report based on Logistic Regression
+
+Accuracy: 0.4482758620689655
+Classification Report:
+               precision    recall  f1-score   support
+
+        High       0.47      0.58      0.52        12
+         Low       0.43      0.50      0.46         6
+      Medium       0.43      0.27      0.33        11
+
+    accuracy                           0.45        29
+   macro avg       0.44      0.45      0.44        29
+weighted avg       0.44      0.45      0.44        29
+
+
+---
+
