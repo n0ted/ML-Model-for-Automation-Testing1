@@ -41,12 +41,33 @@ function App() {
   };
 
   return (
-    <div className="container p-3 mb-2 bg-info text-dark" style={{ minHeight: '100vh', background: 'linear-gradient(to right, #0f2027, #203a43, #2c5364)' }}>
-      <h2 style={{ marginRight: '50px', marginTop: '10px' }}>
+    <div className="container p-3 mb-2 bg-info text-dark" style={{ 
+      display: 'flex', 
+      flexDirection: 'column', 
+      alignItems: 'center', // This centers the children horizontally
+      justifyContent: 'start', // This aligns children to the start of the flex container
+      minHeight: '100vh', 
+      background: 'linear-gradient(to right, #0f2027, #203a43, #2c5364)'
+    }}>
+      <h1 style={{ 
+        marginTop: '20px', // Adjust marginTop as needed
+        alignSelf: 'center' // This will ensure the title is centered if needed
+      }}>
         Priority Prediction Module
-      </h2>
-      <input type="file" className="form-control form-control-sm custom-file-input" id="inputGroupFile02" onChange={handleFileUpload} />
-      <button type="button" className="btn btn-success" style={{ width: '80px', borderRadius: '15px', marginTop: '10px', marginRight:'10px' }} onClick={handlePrediction}>Predict Result</button>
+      </h1>
+      <div style={{ 
+        marginTop: '20px', // Provide space between the title and the form elements
+        display: 'flex', 
+        flexDirection: 'column', 
+        alignItems: 'center' // Center the form elements vertically
+      }}>
+        <input type="file" className="form-control form-control-sm custom-file-input" id="inputGroupFile02" onChange={handleFileUpload} />
+        <button type="button" className="btn btn-success btn1" style={{ 
+          width: '126px', 
+          borderRadius: '15px', 
+          marginTop: '10px' // Use marginTop to space the button from the input
+        }} onClick={handlePrediction}>Predict</button>
+      </div>
 
       {loading && <div className="spinner-border text-primary" role="status"><span className="visually-hidden">Loading...</span></div>}
       {error && <div style={{ color: 'red', marginTop: '10px' }}>{error}</div>}
@@ -55,22 +76,21 @@ function App() {
           maxHeight: '500px', 
           overflowY: 'scroll', 
           marginTop: '20px', 
-          backgroundColor: 'rgba(237, 247, 255, 0.1)', 
+          backgroundColor: '(237, 247, 255, 0.075)', 
           borderRadius: '15px', 
-          border: '0px solid #dee2e6', 
-          padding: '15px'
+          padding: '15px',
         }}>
-          <h2 style={{ color: '#495057' }}>Predictions:</h2>
+          <h1 style={{ color: '#495057' }}>Predictions</h1>
           <ul style={{ listStyleType: 'none', paddingLeft: '0', color: 'white' }}>
             {predictions.map((prediction, index) => (
-              <li key={index} style={{ 
-                background: 'rgba(255, 255, 255, 0.6)', 
+              <li key={index} className= "test" style={{ 
                 margin: '10px 0', 
                 padding: '10px', 
                 borderRadius: '10px', 
-                background: 'linear-gradient(to right, #11998e, #38ef7d)',
-                boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-                backdropFilter: 'blur(5px)'
+                background: 'linear-gradient(to left,#C4E538,#009432,#C4E538)',
+                boxShadow: '0 2px 4px rgba(0,0,0,1.1)',
+                backdropFilter: 'blur(5px)',
+                alignContent:'center'
               }}>
                 TC{index + 1}: {prediction}
               </li>
@@ -122,9 +142,9 @@ export default App;
 
 //   return (
 //     <div className="container p-3 mb-2 bg-info text-dark" style={{ minHeight: '100vh', background: 'linear-gradient(to right, #0f2027, #203a43, #2c5364)' }}>
-//       <h2 style={{ marginRight: '50px', marginTop: '10px' }}>
+//       <h1 style={{ marginRight: '50px', marginTop: '10px' }}>
 //         Priority Prediction Module
-//       </h2>
+//       </h1>
 //       <input type="file" className="form-control form-control-sm custom-file-input" id="inputGroupFile02" onChange={handleFileUpload} />
 //       <button type="button" onClick={handlePrediction} className="btn btn-success" style={{ width: '80px', borderRadius: '39px', marginTop: '10px' }}>Predict Result</button>
 
@@ -132,7 +152,7 @@ export default App;
 //       {error && <div style={{ color: 'red', marginTop: '10px' }}>{error}</div>}
 //       {predictions.length > 0 && (
 //         <div style={{ maxHeight: '500px', overflowY: 'scroll', marginTop: '20px', background: 'linear-gradient(to bottom, #8e9eab, #eef2f3)', borderRadius: '15px', border: '2px solid #dee2e6', padding: '15px' }}>
-//           <h2 style={{ color: '#495057' }}>Predictions:</h2>
+//           <h1 style={{ color: '#495057' }}>Predictions:</h1>
 //           <ul style={{ listStyleType: 'none', paddingLeft: '0', color: '#343a40' }}>
 //             {predictions.map((prediction, index) => (
 //               <li key={index} style={{ background: 'linear-gradient(to right, #11998e, #38ef7d)', margin: '10px 0', padding: '10px', borderRadius: '10px', boxShadow: '0 2px 4px rgba(0,0,0,.1)' }}>

@@ -45,14 +45,12 @@
 h2, .h2 {
   font-size: calc(1.325rem + .9vw);
   color: rgb(255, 255, 255);
-  font-weight: bold;
   font-family: "Vogue", sans-serif; /* Replace "Vogue" with your preferred classy font */
   text-shadow: 0 0 43px rgba(1, 128, 247, 0.767); /* Adjust the values as needed */
 }
 
 .custom-file-input {
   width: 355px; /* Adjust the width as needed */
-  margin-right: 50px;
 }
 .container {
   display: flex;
@@ -60,6 +58,88 @@ h2, .h2 {
   align-items: center;
   max-width: 100%;
 }
+/* button animation */
+.btn1{
+  background-image: linear-gradient(to left,#C4E538,#009432,#C4E538);
+}
+.btn:hover{
+  background-position: right;
+  background: #fff;
+  box-shadow: 0px 2px 10px 5px #1abc9c;
+  color: #000;
+}
+.btn{
+  border: none;
+  margin: 20px;
+  font-family: "oswald",sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  border-radius: 80px;
+  cursor: pointer;
+  color: #fff;
+  background-size: 200%;
+  transition: 0.5s;
+}
+.btn:after {
+  background: #1abc9c;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.5s
+}
+.btn:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+.btn:focus { outline:0; }
+
+.test{
+  border: none;
+  margin: 20px;
+  font-family: "montserrat",sans-serif;
+  text-transform: uppercase;
+  border-radius: 80px;
+  cursor: pointer;
+  color: #fff;
+  background-size: 400%;
+  transition: 0.6s;
+}
+.test:hover{
+  background-position: right;
+}
+/* scrollable container animation */
+.scrollable-container:hover {
+  background-position: right;
+  background: #01080952;
+  box-shadow: 0px 2px 10px 5px #1abc9c;
+  color: #000;
+}
+.scrollable-container:after {
+  background: #1abc9c;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.5s
+}
+.scrollable-container:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+
 .scrollable-container {
   max-Height: '500px';
   overflow-y: 'scroll';
@@ -67,11 +147,21 @@ h2, .h2 {
   background-Color: 'rgba(237, 247, 255, 0.8)';
   border-Radius: '15px';
   border: '2px solid #dee2e6';
-  padding: '15px';
+  padding: '10px';
   scrollbar-Width: 'none'; /* For Firefox */
   -ms-overflow-style: 'none'; /* For Internet Explorer and Edge */
+  margin: 20px;
+  font-family: "oswald",sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+  background-size: 200%;
+  transition: 0.5s;
 }
 
+.scrollable-container:focus { outline:0; }
 .scrollable-container::-webkit-scrollbar{
   display: none;
 }
