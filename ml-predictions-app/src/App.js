@@ -41,28 +41,26 @@ function App() {
   };
 
   return (
-    
     <div className="container p-3 mb-2 bg-info text-dark" style={{ minHeight: '100vh' }}>
-      <h2 style={{ marginRight: '50px', marginTop:'10px'}}>
+      <h2 style={{ marginRight: '50px', marginTop: '10px' }}>
         Priority Prediction Module
-        <small className="text-muted"></small>
       </h2>
       <input type="file" className="form-control form-control-sm custom-file-input" id="inputGroupFile02" onChange={handleFileUpload} />
-      <button type="button" onClick={handlePrediction} className="btn btn-success size"style={{ width: '80px', borderradius: '39px' }}>Predict Result</button>
+      <button type="button" onClick={handlePrediction} className="btn btn-success" style={{ width: '80px', borderRadius: '39px', marginTop: '10px' }}>Predict Result</button>
 
       {loading && <div className="spinner-border text-primary" role="status"><span className="visually-hidden">Loading...</span></div>}
-      {error && <div style={{ color: 'red' }}>{error}</div>}
+      {error && <div style={{ color: 'red', marginTop: '10px' }}>{error}</div>}
       {predictions.length > 0 && (
-        <div>
-  <h2 style={{ color: 'grey' }}>Predictions:</h2>
-  <ul style={{ color: 'white' }}>
-    {predictions.map((prediction, index) => (
-      <li key={index}>TC{index + 1}: {prediction}</li>
-    ))}
-  </ul>
-</div>
-
-
+        <div style={{ maxHeight: '500px', overflowY: 'scroll', marginTop: '20px', backgroundColor: '#e9ecef', borderRadius: '15px', border: '2px solid #dee2e6', padding: '15px' }}>
+          <h2 style={{ color: '#495057' }}>Predictions:</h2>
+          <ul style={{ listStyleType: 'none', paddingLeft: '0', color: '#343a40' }}>
+            {predictions.map((prediction, index) => (
+              <li key={index} style={{ background: '#f8f9fa', margin: '10px 0', padding: '10px', borderRadius: '10px', boxShadow: '0 2px 4px rgba(0,0,0,.1)' }}>
+                TC{index + 1}: {prediction}
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     </div>
   );
