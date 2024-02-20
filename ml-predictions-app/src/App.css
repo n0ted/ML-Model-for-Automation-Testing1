@@ -58,14 +58,22 @@ h2, .h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
 }
 .scrollable-container {
-  max-height: 400px; /* Adjust the height as needed */
-  overflow-y: auto; /* Enables vertical scrolling */
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #f8f9fa; /* Light background, adjust as needed */
-  border-radius: 5px; /* Optional: for rounded corners */
+  max-Height: '500px';
+  overflow-y: 'scroll';
+  margin-Top: '20px';
+  background-Color: 'rgba(237, 247, 255, 0.8)';
+  border-Radius: '15px';
+  border: '2px solid #dee2e6';
+  padding: '15px';
+  scrollbar-Width: 'none'; /* For Firefox */
+  -ms-overflow-style: 'none'; /* For Internet Explorer and Edge */
+}
+
+.scrollable-container::-webkit-scrollbar{
+  display: none;
 }
 
 @keyframes App-logo-spin {
