@@ -58,9 +58,18 @@ h2, .h2 {
   align-items: center;
   max-width: 100%;
 }
+.h1name{
+  color: #fde047;
+  background: -webkit-linear-gradient(#fde047, #34d399);
+  background: linear-gradient(to right,#fde047, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block; 
+}
 /* button animation */
 .btn1{
-  background-image: linear-gradient(to left,#C4E538,#009432,#C4E538);
+  background-image: linear-gradient(to left,#009432,#C4E538,#009432);
 }
 .btn:hover{
   background-position: right;

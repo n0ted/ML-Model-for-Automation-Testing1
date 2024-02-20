@@ -49,7 +49,7 @@ function App() {
       minHeight: '100vh', 
       background: 'linear-gradient(to right, #0f2027, #203a43, #2c5364)'
     }}>
-      <h1 style={{ 
+      <h1 className="h1name" style={{ 
         marginTop: '20px', // Adjust marginTop as needed
         alignSelf: 'center' // This will ensure the title is centered if needed
       }}>
