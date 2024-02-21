@@ -47,11 +47,10 @@ function App() {
       alignItems: 'center', // This centers the children horizontally
       justifyContent: 'start', // This aligns children to the start of the flex container
       minHeight: '100vh', 
-      background: 'linear-gradient(to right, #0f2027, #203a43, #2c5364)'
     }}>
-      <h1 className="h1name" style={{ 
-        marginTop: '20px', // Adjust marginTop as needed
-        alignSelf: 'center' // This will ensure the title is centered if needed
+            <h1 className="h1name" style={{ 
+        marginTop: '20px',
+        alignSelf: 'center'
       }}>
         Priority Prediction Module
       </h1>
@@ -64,7 +63,7 @@ function App() {
         <input type="file" className="form-control form-control-sm custom-file-input" id="inputGroupFile02" onChange={handleFileUpload} />
         <button type="button" className="btn btn-success btn1" style={{ 
           width: '126px', 
-          borderRadius: '15px', 
+          borderRadius: '20px', 
           marginTop: '10px' // Use marginTop to space the button from the input
         }} onClick={handlePrediction}>Predict</button>
       </div>
@@ -80,7 +79,7 @@ function App() {
           borderRadius: '15px', 
           padding: '15px',
         }}>
-          <h1 style={{ color: '#495057' }}>Predictions</h1>
+          <h1 className='pred' style={{ color: '#495057' }}>Predictions</h1>
           <ul style={{ listStyleType: 'none', paddingLeft: '0', color: 'white' }}>
             {predictions.map((prediction, index) => (
               <li key={index} className= "test" style={{ 
