@@ -12,10 +12,51 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-/* .pred{
-  background-image: linear-gradient(to left,#009432,#C4E538,#009432);
+.pred {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold; /* Ensures the text is bold */
+  background: linear-gradient(
+    to right, 
+    hsl(153.47deg, 63.09%, 54.31%) 0%, 
+    hsl(52.02deg, 90.58%, 62.55%) 20%, 
+    hsl(52.02deg, 90.58%, 62.55%) 50%, 
+    hsl(152.31deg, 62.45%, 55.1%) 80%, 
+    hsl(153.47deg, 63.09%, 54.31%) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text; /* Standard property for compatibility */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
+  color: transparent; /* Fallback for other browsers, might not work with background-clip */
+  animation: shine 10s infinite linear;
+}
 
+
+@keyframes shine {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+/* Glow effect on hover */
+/* .pred:hover {
+  animation: shine 10s infinite linear;
 } */
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 600px;
+  }
+  100% {
+    background-position: 600px;
+  }
+}
+
 .App-header {
   background-color: #0055ff;
   min-height: 100vh;

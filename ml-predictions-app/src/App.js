@@ -41,56 +41,71 @@ function App() {
   };
 
   return (
-    <div className="container background p-3 mb-2 bg-info text-dark" style={{ 
+    <div className="container p-3 mb-2 bg-info text-dark" style={{ 
       display: 'flex', 
       flexDirection: 'column', 
-      alignItems: 'center', // This centers the children horizontally
-      justifyContent: 'start', // This aligns children to the start of the flex container
+      alignItems: 'center',
+      justifyContent: 'start',
       minHeight: '100vh', 
     }}>
-            <h1 className="h1name" style={{ 
+      <h1 className="h1name" style={{ 
         marginTop: '20px',
         alignSelf: 'center'
       }}>
         Priority Prediction Module
       </h1>
       <div style={{ 
-        marginTop: '20px', // Provide space between the title and the form elements
-        display: 'flex', 
-        flexDirection: 'column', 
-        alignItems: 'center' // Center the form elements vertically
+        marginTop: '20px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
       }}>
         <input type="file" className="form-control form-control-sm custom-file-input" id="inputGroupFile02" onChange={handleFileUpload} />
-        <button type="button" className="btn btn-success btn1" style={{ 
-          width: '358px', 
-          borderRadius: '20px', 
-          marginTop: '10px', // Use marginTop to space the button from the input
-          fontWeight:'bolder'
-        }} onClick={handlePrediction}>Predict</button>
-      </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}> {/* Flex container for button and spinner */}
+  <button type="button" className="btn btn-success btn1" style={{ 
+    width: '358px', 
+    borderRadius: '20px', 
+    marginTop: '10px',
+    fontWeight: 'bolder',
+    marginLeft: '70px',
+    marginRight: '20px', // Keep space for spinner
 
-      {loading && <div className="spinner-border text-primary" role="status"><span className="visually-hidden">Loading...</span></div>}
+  }} onClick={handlePrediction}>Predict</button>
+  {/* Placeholder for spinner */}
+      <div style={{ 
+        width: '50px', // Approximate width of spinner
+        height: '50px', // Approximate height of spinner
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        visibility: loading ? 'visible' : 'hidden', // Only show spinner when loading
+      }}>
+        <div className="spinner-border text-primary" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+      </div>
       {error && <div style={{ color: 'red', marginTop: '10px' }}>{error}</div>}
       {predictions.length > 0 && (
         <div className="scrollable-container" style={{ 
           maxHeight: '310px', 
           overflowY: 'auto', 
-          marginTop: '20px', 
-          backgroundColor: '(237, 247, 255, 0.075)', 
+          marginTop: '20px',  
           borderRadius: '15px', 
           padding: '15px',
         }}>
-          <h1 className='pred' style={{ color: '#495057' }}>Predictions</h1>
-          <ul style={{ listStyleType: 'none', paddingLeft: '0', color: 'white' ,  padding: '0 20px' }}>
+          <h1 className='pred' style={{ color: '#495057', fontFamily: 'Arial, "Helvetica Neue", Helvetica, sans-serif', fontWeight: 'bold' }}>Predictions</h1>
+          <ul style={{ listStyleType: 'none', paddingLeft: '0', color: 'white', padding: '0 20px' }}>
             {predictions.map((prediction, index) => (
               <li key={index} className= "test" style={{ 
                 margin: '10px 0', 
                 padding: '5px', 
                 borderRadius: '10px', 
-                background: 'linear-gradient(to left,#009432,#C4E538)',
+                background: 'linear-gradient(to left, #009432, #C4E538)',
                 boxShadow: '0 2px 4px rgba(0,0,0,1.1)',
                 backdropFilter: 'blur(5px)',
-                alignContent:'center',
+                alignContent: 'center',
               }}>
                 TC{index + 1}: {prediction}
               </li>
