@@ -61,8 +61,9 @@ function App() {
         alignItems: 'center'
       }}>
         <input type="file" className="form-control form-control-sm custom-file-input" id="inputGroupFile02" onChange={handleFileUpload} />
-        <div style={{ display: 'flex', alignItems: 'center' }}> {/* Flex container for button and spinner */}
-  <button type="button" className="btn btn-success btn1" style={{ 
+        <div style={{ alignItems: 'center', justifyContent: 'center'}}> {/* Flex container for button and spinner */}
+        <button class="button-86" role="button" onClick={handlePrediction}>PREDICT</button>
+  {/* <button type="button" className="btn btn-success btn1" style={{ 
     width: '358px', 
     borderRadius: '20px', 
     marginTop: '10px',
@@ -70,7 +71,7 @@ function App() {
     marginLeft: '70px',
     marginRight: '20px', // Keep space for spinner
 
-  }} onClick={handlePrediction}>Predict</button>
+  }} onClick={handlePrediction}>Predict</button> */}
   {/* Placeholder for spinner */}
       <div style={{ 
         width: '50px', // Approximate width of spinner
@@ -80,7 +81,7 @@ function App() {
         justifyContent: 'center',
         visibility: loading ? 'visible' : 'hidden', // Only show spinner when loading
       }}>
-        <div className="spinner-border text-primary" role="status">
+        <div className="spinner-grow" role="status">
           <span className="visually-hidden">Loading...</span>
         </div>
       </div>
@@ -91,7 +92,7 @@ function App() {
         <div className="scrollable-container" style={{ 
           maxHeight: '310px', 
           overflowY: 'auto', 
-          marginTop: '20px',  
+          marginTop: '-28px',  
           borderRadius: '15px', 
           padding: '15px',
         }}>
