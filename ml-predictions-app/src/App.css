@@ -216,17 +216,11 @@ h2, .h2 {
   to { width: 100%; }
 }
 
-@keyframes blinkCaret {
-  from, to { border-color: transparent; }
-  50% { border-color: black; }
-}
 
 .h1name {
-  font-family: monospace;
   white-space: nowrap;
   overflow: hidden;
-  border-right: .15em solid black; /* The caret (cursor) */
-  animation: 
-    typewriter 4s steps(40) 1s 1 normal both,
-    blinkCaret .75s step-end infinite;
+  border-right: .15em solid rgba(255, 255, 255, 0.75);/* Initially show the cursor */
+  animation: typewriter 2s steps(40) forwards; /* Use 'forwards' to maintain the final state */
 }
+
