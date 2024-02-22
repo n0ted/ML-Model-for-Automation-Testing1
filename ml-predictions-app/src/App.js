@@ -81,13 +81,13 @@ function App() {
           padding: '15px',
         }}>
           <h1 className='pred' style={{ color: '#495057' }}>Predictions</h1>
-          <ul style={{ listStyleType: 'none', paddingLeft: '0', color: 'white' }}>
+          <ul style={{ listStyleType: 'none', paddingLeft: '0', color: 'white' ,  padding: '0 20px' }}>
             {predictions.map((prediction, index) => (
               <li key={index} className= "test" style={{ 
                 margin: '10px 0', 
                 padding: '5px', 
                 borderRadius: '10px', 
-                background: 'linear-gradient(to left,#C4E538,#009432,#C4E538)',
+                background: 'linear-gradient(to left,#009432,#C4E538)',
                 boxShadow: '0 2px 4px rgba(0,0,0,1.1)',
                 backdropFilter: 'blur(5px)',
                 alignContent:'center',
