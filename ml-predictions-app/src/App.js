@@ -62,9 +62,10 @@ function App() {
       }}>
         <input type="file" className="form-control form-control-sm custom-file-input" id="inputGroupFile02" onChange={handleFileUpload} />
         <button type="button" className="btn btn-success btn1" style={{ 
-          width: '126px', 
+          width: '358px', 
           borderRadius: '20px', 
-          marginTop: '10px' // Use marginTop to space the button from the input
+          marginTop: '10px', // Use marginTop to space the button from the input
+          fontWeight:'bolder'
         }} onClick={handlePrediction}>Predict</button>
       </div>
 
@@ -89,7 +90,7 @@ function App() {
                 background: 'linear-gradient(to left,#C4E538,#009432,#C4E538)',
                 boxShadow: '0 2px 4px rgba(0,0,0,1.1)',
                 backdropFilter: 'blur(5px)',
-                alignContent:'center'
+                alignContent:'center',
               }}>
                 TC{index + 1}: {prediction}
               </li>

@@ -55,13 +55,14 @@ h2, .h2 {
 .custom-file-input {
   width: 355px; /* Adjust the width as needed */
   border-radius: 15px;
-  font-family: "oswald",sans-serif;
   position: relative;
   border-radius: 80px;
   cursor: pointer;
   color: #030000;
   background-size: 200%;
   transition: 0.5s;
+  font-weight: 500;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .custom-file-input:hover{
@@ -96,6 +97,7 @@ h2, .h2 {
 /* button animation */
 .btn1{
   background-image: linear-gradient(to left,#009432,#C4E538,#009432);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 .btn:hover{
   background-position: right;
@@ -108,7 +110,7 @@ h2, .h2 {
   margin: 20px;
   font-family: "oswald",sans-serif;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 9px;
   position: relative;
   border-radius: 80px;
   cursor: pointer;
@@ -215,12 +217,14 @@ h2, .h2 {
   from { width: 0; }
   to { width: 100%; }
 }
-
-
+@keyframes blinkCaret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgba(255, 255, 255, 0.75); }
+}
 .h1name {
   white-space: nowrap;
   overflow: hidden;
   border-right: .15em solid rgba(255, 255, 255, 0.75);/* Initially show the cursor */
-  animation: typewriter 2s steps(40) forwards; /* Use 'forwards' to maintain the final state */
+  animation: typewriter 2s steps(40) forwards, /* Use 'forwards' to maintain the final state */
+  blinkCaret .75s step-end infinite;
 }
-
