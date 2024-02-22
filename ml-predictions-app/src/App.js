@@ -73,7 +73,7 @@ function App() {
       {error && <div style={{ color: 'red', marginTop: '10px' }}>{error}</div>}
       {predictions.length > 0 && (
         <div className="scrollable-container" style={{ 
-          maxHeight: '300px', 
+          maxHeight: '310px', 
           overflowY: 'auto', 
           marginTop: '20px', 
           backgroundColor: '(237, 247, 255, 0.075)', 
@@ -85,7 +85,7 @@ function App() {
             {predictions.map((prediction, index) => (
               <li key={index} className= "test" style={{ 
                 margin: '10px 0', 
-                padding: '10px', 
+                padding: '5px', 
                 borderRadius: '10px', 
                 background: 'linear-gradient(to left,#C4E538,#009432,#C4E538)',
                 boxShadow: '0 2px 4px rgba(0,0,0,1.1)',

@@ -187,7 +187,6 @@ h2, .h2 {
   padding: '10px';
   scrollbar-Width: 'none'; /* For Firefox */
   -ms-overflow-style: 'none'; /* For Internet Explorer and Edge */
-  margin: 20px;
   font-family: "oswald",sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
