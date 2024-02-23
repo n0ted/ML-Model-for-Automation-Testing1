@@ -2,11 +2,6 @@
 
 **DO NOT USE WITHOUT PERMISSION**
 
-<div style="text-align:center; margin: auto;">
-  <img src="ML_Training/DataSet/ReactApp-GoogleChrome2024-02-2218-50-14-ezgif.com-video-to-gif-converter.gif" alt="Alt text" width="600" height="363" style="border-radius: 10px; filter: blur(5px);">
-</div>
-
-
 ## Overview
 
 This project, named "ML Model for Automation Testing," aims to streamline the testing process through the implementation of machine learning techniques. The project leverages a Logistic Regression model, trained on manual test cases, to predict the priority score of new test cases. The entire solution is encapsulated within a user-friendly React application. Flask serves as the backend, managing ML predictions and handling HTTPS requests via Axios.
