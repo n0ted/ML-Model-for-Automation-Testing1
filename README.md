@@ -2,9 +2,10 @@
 
 **DO NOT USE WITHOUT PERMISSION**
 
-<div style="text-align:center;">
-  <img src="ML_Training/DataSet/ReactApp-GoogleChrome2024-02-2218-50-14-ezgif.com-video-to-gif-converter.gif" alt="Alt text" width="600" height="363" style="border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+<div style="text-align:center; margin: auto;">
+  <img src="ML_Training/DataSet/ReactApp-GoogleChrome2024-02-2218-50-14-ezgif.com-video-to-gif-converter.gif" alt="Alt text" width="600" height="363" style="border-radius: 10px; filter: blur(5px);">
 </div>
+
 
 ## Overview
 
